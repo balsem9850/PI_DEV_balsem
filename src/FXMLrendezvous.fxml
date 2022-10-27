@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLrendezvousController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="46.0" layoutY="63.0" prefHeight="105.0" prefWidth="100.0" spacing="12.0">
+         <children>
+            <DatePicker fx:id="TFdate" promptText="Date " />
+            <TextField fx:id="TFcontrat" promptText="Contrat" />
+            <Button fx:id="btnadd" mnemonicParsing="false" onAction="#add" text="Ajouter" />
+         </children>
+      </VBox>
+      <TableView fx:id="TVrdv" layoutX="224.0" layoutY="33.0" prefHeight="257.0" prefWidth="343.0">
+        <columns>
+          <TableColumn fx:id="TVid" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="TVdate" prefWidth="147.0" text="Date" />
+            <TableColumn fx:id="TVcontrat" prefWidth="120.0" text="Contrat" />
+        </columns>
+      </TableView>
+      <Button fx:id="btndel" layoutX="268.0" layoutY="298.0" mnemonicParsing="false" onAction="#del" text="Supprimer" />
+      <Button fx:id="btnupdate" layoutX="396.0" layoutY="298.0" mnemonicParsing="false" onAction="#update" text="modifier" />
+      <Button fx:id="tfconsult" layoutX="46.0" layoutY="283.0" mnemonicParsing="false" onAction="#toPlaning" text="Consulter les planing" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="542.0" prefWidth="977.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GestionplaninigController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="92.0" layoutY="85.0" prefHeight="394.0" prefWidth="178.0" spacing="15.0">
+         <children>
+            <TextField fx:id="daterdvTF" promptText="Date de Rendez Vous" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rendez vous" wrappingWidth="175.701171875" />
+            <ComboBox fx:id="CBrdv" prefHeight="32.0" prefWidth="178.0" />
+            <TextField fx:id="heureTF" promptText="heure" />
+            <TextField fx:id="prixTF" promptText="prix" />
+            <ComboBox fx:id="TFetatRDV" prefHeight="31.0" prefWidth="181.0" />
+            <Button fx:id="Ajouter" mnemonicParsing="false" onAction="#AjouterPlaning" text="Ajouter" />
+         </children>
+      </VBox>
+      <TableView fx:id="TVPlaning" layoutX="415.0" layoutY="63.0" prefHeight="344.0" prefWidth="501.0">
+        <columns>
+          <TableColumn fx:id="TVid" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="TVdaterdv" prefWidth="141.0" text="Rendezvous" />
+            <TableColumn fx:id="TVheure" prefWidth="141.0" text="Heure joignabilité" />
+            <TableColumn fx:id="TVprix" prefWidth="141.0" text="prix" />
+        </columns>
+      </TableView>
+      <Button fx:id="Supprimer" layoutX="501.0" layoutY="417.0" mnemonicParsing="false" onAction="#Supprimer" text="Supprimer" />
+      <Button fx:id="Modifier" layoutX="617.0" layoutY="417.0" mnemonicParsing="false" onAction="#Modifier" text="Modifier" />
+      <Button fx:id="SearchBTN" layoutX="745.0" layoutY="14.0" mnemonicParsing="false" onAction="#Search" text="chercher" />
+      <TextField fx:id="SearchTF" layoutX="546.0" layoutY="14.0" promptText="Recherche" />
+      <Text layoutX="23.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion de Planing ">
+         <font>
+            <Font name="System Bold" size="41.0" />
+         </font>
+      </Text>
+      <Button fx:id="toRDV" layoutX="131.0" layoutY="479.0" mnemonicParsing="false" onAction="#toRDV" text="Consulter Les rendez vous" />
+   </children>
+</AnchorPane>
